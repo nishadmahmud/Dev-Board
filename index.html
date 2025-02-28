@@ -41,7 +41,7 @@
             class="bg-[#F4F7FF] rounded-[32px] flex justify-center items-center gap-2"
           >
             <img src="assets/nav_tick.svg" class="h-6 pl-4" />
-            <h4 class="font-bold text-2xl py-3 pr-2">23</h4>
+            <h4 id="nav-task-count" class="font-bold text-2xl py-3 pr-2">23</h4>
           </div>
           <button class="rounded-full border-[8px] border-[#F4F7FF]">
             <img src="assets/theme.svg" class="" />
@@ -65,7 +65,7 @@
                 <h4 class="text-xs font-medium opacity-80 text-[#00303c]">
                   Task Assigned
                 </h4>
-                <h3 class="text-2xl font-bold">6</h3>
+                <h3 id="task-assigned-count" class="text-2xl font-bold">6</h3>
               </div>
             </div>
             <div
@@ -85,10 +85,7 @@
               >
                 <img src="assets/calendar.svg" class="h-5" />
               </div>
-              <p>
-                Wed , <br />
-                Jul 28 2025
-              </p>
+              <div id="current-date" class="text-gray-700 font-medium"></div>
             </div>
           </div>
           <hr class="w-full h-[0px] border border-[#3752fd]/20 border-dashed ">
@@ -112,7 +109,7 @@
                         <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
                         <p class="text-[12px] text-[#00303C]">21 March 2025</p>
                     </div>
-                    <button class="text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
+                    <button class="complete-task-btn text-[12px] hover:bg-slate-800 cursor-pointer font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
                 </div>
              </div>
              <!-- Add Dark Mode -->
@@ -131,7 +128,7 @@
                         <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
                         <p class="text-[12px] text-[#00303C]">21 March 2025</p>
                     </div>
-                    <button class="text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
+                    <button class="text-[12px] font-medium complete-task-btn hover:bg-slate-800 cursor-pointer bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
                 </div>
              </div>
              <!-- Optimize HomePage -->
@@ -151,7 +148,7 @@
                         <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
                         <p class="text-[12px] text-[#00303C]">21 March 2025</p>
                     </div>
-                    <button class="text-sm font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
+                    <button class="complete-task-btn hover:bg-slate-800 cursor-pointer text-sm font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
                 </div>
              </div>
              <!-- Add new emoji -->
@@ -170,7 +167,7 @@
                         <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
                         <p class="text-[12px] text-[#00303C]">21 March 2025</p>
                     </div>
-                    <button class="text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
+                    <button class="complete-task-btn hover:bg-slate-800 cursor-pointer text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
                 </div>
              </div>
              <!-- OpenAI API -->
@@ -190,7 +187,7 @@
                         <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
                         <p class="text-[12px] text-[#00303C]">21 March 2025</p>
                     </div>
-                    <button class="text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
+                    <button class="complete-task-btn hover:bg-slate-800 cursor-pointer text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
                 </div>
              </div>
              <!-- Imrpove job search -->
@@ -209,7 +206,7 @@
                         <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
                         <p class="text-[12px] text-[#00303C]">21 March 2025</p>
                     </div>
-                    <button class="text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
+                    <button class="complete-task-btn hover:bg-slate-800 cursor-pointer text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
                 </div>
              </div>
           </div>
@@ -224,10 +221,16 @@
                 <button class="text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Clear History</button>
                 <hr class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mt-3 mb-[18px]">
             </div>
+            <div id="activity-log" class="px-4">
+
+            </div>
         </div>
       </section>
     </header>
 
     <main></main>
+
+    <script src="js/activity.js"></script>
+    <script src="js/date.js"></script>
   </body>
 </html>
