@@ -1,17 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Dev Board</title>
-</head>
-<body>
-    <header>
+    <style>
+      .poppins{
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="bg-[#e4e9f8] poppins">
+    <header class="max-w-[1080px] mx-auto">
+      <nav class="bg-white flex justify-between h-20 rounded-xl p-6 mt-4">
+        <div class="flex justify-center items-center gap-3">
+          <img src="assets/logo.svg" class="w-[50px]" />
+          <h1 class="text-2xl">
+            <span class="font-light">Dev</span
+            ><span class="font-bold">Board</span>
+          </h1>
+        </div>
+        <div class="flex justify-center items-center gap-7">
+            <div class="bg-[#F4F7FF] rounded-[32px] flex justify-center items-center gap-2">
+                <img src="assets/nav_tick.svg" class="h-6 pl-4" />
+                <h4 class="font-bold text-2xl py-3 pr-2">23</h4>
+            </div>
+            <button class=" rounded-full border-[8px] border-[#F4F7FF]">
+                <img src="assets/theme.svg" class="" />
+            </button>
+        </div>
+      </nav>
 
+      <section class="grid grid-cols-4 grid-rows-1 gap-6 mt-4">
+        <div class="col-span-3 w-full bg-white rounded-lg">
+          <div class="flex px-4 py-4 gap-4">
+            <div
+              class="flex gap-4 justify-start items-center bg-[#e4e9f8] py-4 px-3 rounded-lg w-1/4"
+            >
+                <div class="rounded-full bg-white h-11 w-11 flex justify-center items-center">
+                    <img src="assets/checkbox.svg" class="h-5" />
+                </div>
+              
+              <div>
+                <h4 class="text-xs font-medium opacity-80 text-[#00303c]">Task Assigned</h4>
+                <h3 class="text-2xl font-bold">6</h3>
+              </div>
+            </div>
+            <div
+              class="flex gap-4 justify-start items-center bg-gradient-to-r from-[#3752fd] via-[#6b7ffa] to-[#9aa7f7] py-4 px-7 rounded-lg w-1/2"
+            >
+                <img src="assets/board.svg" class="w-14">
+                <p class="text-white text-lg font-medium">Discover Something <br> New Today!</p>
+            </div>
+            <div
+              class="flex gap-4 justify-start items-center bg-[#e4e9f8] py-4 px-3 rounded-lg w-1/4"
+            >
+                <div class="rounded-full bg-white h-11 w-11 flex justify-center items-center">
+                    <img src="assets/calendar.svg" class="h-5" />
+                </div>
+                <p>Wed , <br> Jul 28 2025 </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-3"></div>
+        </div>
+
+        <div class="h-10 w-full bg-red-400"></div>
+      </section>
     </header>
 
-    <main>
-        
-    </main>
-</body>
+    <main></main>
+  </body>
 </html>
