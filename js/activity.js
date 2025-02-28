@@ -19,6 +19,7 @@ function addActivity(taskName) {
 
 for (const button of document.querySelectorAll('.complete-task-btn')) {
     button.addEventListener('click', function () {
+        alert('Board Updated Successfully');
         const taskCard = button.parentNode.parentNode;
         const taskName = taskCard.querySelector('h2').textContent;
 
@@ -35,6 +36,9 @@ for (const button of document.querySelectorAll('.complete-task-btn')) {
 
         taskAssignedCount--;
         navTaskCount++;
+
+        if(taskAssignedCount===0)
+            alert('Congrates!!! You have completed all the current task');
         //   updateTaskAssignedCount();
         //   updateNavTaskCount();
 
