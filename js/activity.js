@@ -39,8 +39,9 @@ for (const button of document.querySelectorAll('.complete-task-btn')) {
 
         if(taskAssignedCount===0)
             alert('Congrates!!! You have completed all the current task');
-        //   updateTaskAssignedCount();
-        //   updateNavTaskCount();
+        
+        document.getElementById('task-assigned-count').textContent = taskAssignedCount;
+        document.getElementById('nav-task-count').textContent = navTaskCount;
 
         addActivity(taskName);
     });

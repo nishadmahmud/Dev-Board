@@ -30,7 +30,7 @@
     <header class="max-w-[1080px] mx-auto">
       <nav class="bg-white flex justify-between h-20 rounded-xl p-6 mt-4">
         <div class="flex justify-center items-center gap-3">
-          <img src="assets/logo.svg" class="w-[50px]" />
+          <img src="assets/logo.svg" class="w-[35px]" />
           <h1 class="text-2xl">
             <span class="font-light">Dev</span
             ><span class="font-bold">Board</span>
@@ -68,15 +68,26 @@
                 <h3 id="task-assigned-count" class="text-2xl font-bold">6</h3>
               </div>
             </div>
-            <div
-              class="flex gap-4 justify-start items-center bg-gradient-to-r from-[#3752fd] via-[#6b7ffa] to-[#9aa7f7] py-4 px-7 rounded-lg w-1/2"
+            <!-- <div
+              id="blog"
+              class="flex gap-4 justify-start items-center cursor-pointer bg-gradient-to-r from-[#3752fd] via-[#6b7ffa] to-[#9aa7f7] py-4 px-7 rounded-lg w-1/2"
             >
               <img src="assets/board.svg" class="w-14" />
               <p class="text-white text-lg font-medium">
                 Discover Something <br />
                 New Today!
               </p>
-            </div>
+            </div> -->
+            <button
+              id="blog"
+              class="flex gap-4 justify-start items-center cursor-pointer bg-gradient-to-r from-[#3752fd] via-[#6b7ffa] to-[#9aa7f7] py-4 px-7 rounded-lg w-1/2"
+            >
+              <img src="assets/board.svg" class="w-14" />
+              <p class="text-white text-lg font-medium">
+                Discover Something <br />
+                New Today!
+              </p>
+            </button>
             <div
               class="flex gap-4 justify-start items-center bg-[#e4e9f8] py-4 px-3 rounded-lg w-1/4"
             >
@@ -88,150 +99,252 @@
               <div id="current-date" class="text-gray-700 font-medium"></div>
             </div>
           </div>
-          <hr class="w-full h-[0px] border border-[#3752fd]/20 border-dashed ">
-
+          <hr class="w-full h-[0px] border border-[#3752fd]/20 border-dashed" />
 
           <div class="grid grid-cols-3 px-4 py-6 gap-6">
             <!-- fix mobile -->
-             <div class="bg-[#e4e9f8] rounded-xl p-4">
-                <div class="bg-white rounded-md w-24 px-3 py-2 mb-3">
-                    <p class="text-center text-sm font-normal">ShopEase</p>
+            <div class="bg-[#e4e9f8] rounded-xl p-4">
+              <div class="bg-white rounded-md w-24 px-3 py-2 mb-3">
+                <p class="text-center text-sm font-normal">ShopEase</p>
+              </div>
+              <h2 class="text-lg font-medium mb-3 text-[#00303C]">
+                Fix Mobile Button Issue
+              </h2>
+              <div class="bg-white rounded-md px-3 py-2 mb-3">
+                <p
+                  class="opacity-50 tracking-wide text-ellipsis text-[12px] font-normal"
+                >
+                  Debug using Chrome
+                </p>
+                <p
+                  class="opacity-50 tracking-wide text-ellipsis truncate text-[12px] font-normal"
+                >
+                  DevTools, check for overlapping elements, and ensure onClick
+                  works properly and ensure onClick works properly
+                </p>
+              </div>
+              <hr
+                class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-3"
+              />
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
+                  <p class="text-[12px] text-[#00303C]">21 March 2025</p>
                 </div>
-                <h2 class="text-lg font-medium mb-3 text-[#00303C]">Fix Mobile Button Issue </h2>
-                <div class="bg-white rounded-md px-3 py-2 mb-3">
-                    <p class="opacity-50 tracking-wide text-ellipsis text-[12px] font-normal">Debug using Chrome</p>
-                    <p class="opacity-50 tracking-wide text-ellipsis truncate text-[12px] font-normal">DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
+                <button
+                  class="complete-task-btn text-[12px] hover:bg-slate-800 cursor-pointer font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!-- Add Dark Mode -->
+            <div class="bg-[#e4e9f8] rounded-xl p-4">
+              <div class="bg-white rounded-md w-24 px-3 py-2 mb-3">
+                <p class="text-center text-sm font-normal">CloudSync</p>
+              </div>
+              <h2 class="text-lg font-medium mb-3 text-[#00303C]">
+                Add Dark Mode
+              </h2>
+              <div class="bg-white rounded-md px-3 py-2 mb-3">
+                <p
+                  class="opacity-50 tracking-wide text-ellipsis text-[12px] font-normal"
+                >
+                  Store the user's preference in
+                </p>
+                <p
+                  class="opacity-50 tracking-wide text-ellipsis truncate text-[12px] font-normal"
+                >
+                  localStorage, update CSS variables dynamically, and apply a
+                  smooth transition effect.
+                </p>
+              </div>
+              <hr
+                class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-3"
+              />
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
+                  <p class="text-[12px] text-[#00303C]">21 March 2025</p>
                 </div>
-                <hr class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-3">
-                <div class="flex justify-between">
-                    <div>
-                        <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
-                        <p class="text-[12px] text-[#00303C]">21 March 2025</p>
-                    </div>
-                    <button class="complete-task-btn text-[12px] hover:bg-slate-800 cursor-pointer font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
+                <button
+                  class="text-[12px] font-medium complete-task-btn hover:bg-slate-800 cursor-pointer bg-[#3752FD] rounded-lg text-white px-4 py-2"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!-- Optimize HomePage -->
+            <div class="bg-[#e4e9f8] rounded-xl p-4">
+              <div class="bg-white rounded-md w-24 px-3 py-2 mb-3">
+                <p class="text-center text-sm font-normal">SwiftPay</p>
+              </div>
+              <h2 class="text-lg font-medium mb-3 text-[#00303C]">
+                Optimize Home page 
+              </h2>
+              <div class="bg-white rounded-md px-3 py-2 mb-3">
+                <p
+                  class="opacity-50 tracking-wide text-ellipsis text-[12px] font-normal"
+                >
+                  Debug using Chrome
+                </p>
+                <p
+                  class="opacity-50 tracking-wide text-ellipsis truncate text-[12px] font-normal"
+                >
+                  DevTools, check for overlapping elements, and ensure onClick
+                  works properly and ensure onClick works properly
+                </p>
+              </div>
+              <hr
+                class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-3"
+              />
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
+                  <p class="text-[12px] text-[#00303C]">21 March 2025</p>
                 </div>
-             </div>
-             <!-- Add Dark Mode -->
-             <div class="bg-[#e4e9f8] rounded-xl p-4">
-                <div class="bg-white rounded-md w-24 px-3 py-2 mb-3">
-                    <p class="text-center text-sm font-normal">CloudSync</p>
+                <button
+                  class="complete-task-btn hover:bg-slate-800 cursor-pointer text-sm font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!-- Add new emoji -->
+            <div class="bg-[#e4e9f8] rounded-xl p-4">
+              <div class="bg-white rounded-md w-24 px-3 py-2 mb-3">
+                <p class="text-center text-sm font-normal">Meta</p>
+              </div>
+              <h2 class="text-lg font-medium mb-3 text-[#00303C]">
+                Add new emoji 🤲
+              </h2>
+              <div class="bg-white rounded-md px-3 py-2 mb-3">
+                <p
+                  class="opacity-50 tracking-wide text-ellipsis text-[12px] font-normal"
+                >
+                  Store the user's preference in
+                </p>
+                <p
+                  class="opacity-50 tracking-wide text-ellipsis truncate text-[12px] font-normal"
+                >
+                  localStorage, update CSS variables dynamically, and apply a
+                  smooth transition effect.
+                </p>
+              </div>
+              <hr
+                class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-3"
+              />
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
+                  <p class="text-[12px] text-[#00303C]">21 March 2025</p>
                 </div>
-                <h2 class="text-lg font-medium mb-3 text-[#00303C]">Add Dark Mode</h2>
-                <div class="bg-white rounded-md px-3 py-2 mb-3">
-                    <p class="opacity-50 tracking-wide text-ellipsis text-[12px] font-normal">Store the user's preference in</p>
-                    <p class="opacity-50 tracking-wide text-ellipsis truncate text-[12px] font-normal">localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                <button
+                  class="complete-task-btn hover:bg-slate-800 cursor-pointer text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!-- OpenAI API -->
+            <div class="bg-[#e4e9f8] rounded-xl p-4">
+              <div class="bg-white rounded-md w-[105px] px-3 py-2 mb-3">
+                <p class="text-center text-sm font-normal">Google LLC</p>
+              </div>
+              <h2 class="text-lg font-medium mb-3 text-[#00303C]">
+                Integrate OpenAI API
+              </h2>
+              <div class="bg-white rounded-md px-3 py-2 mb-3">
+                <p
+                  class="opacity-50 tracking-wide text-ellipsis text-[12px] font-normal"
+                >
+                  Debug using Chrome
+                </p>
+                <p
+                  class="opacity-50 tracking-wide text-ellipsis truncate text-[12px] font-normal"
+                >
+                  DevTools, check for overlapping elements, and ensure onClick
+                  works properly and ensure onClick works properly
+                </p>
+              </div>
+              <hr
+                class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-3"
+              />
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
+                  <p class="text-[12px] text-[#00303C]">21 March 2025</p>
                 </div>
-                <hr class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-3">
-                <div class="flex justify-between">
-                    <div>
-                        <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
-                        <p class="text-[12px] text-[#00303C]">21 March 2025</p>
-                    </div>
-                    <button class="text-[12px] font-medium complete-task-btn hover:bg-slate-800 cursor-pointer bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
+                <button
+                  class="complete-task-btn hover:bg-slate-800 cursor-pointer text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!-- Imrpove job search -->
+            <div class="bg-[#e4e9f8] rounded-xl p-4">
+              <div class="bg-white rounded-md w-24 px-3 py-2 mb-3">
+                <p class="text-center text-sm font-normal">Glassdoar</p>
+              </div>
+              <h2 class="text-[17px] font-medium mb-3 text-[#00303C]">
+                Improve Job searching
+              </h2>
+              <div class="bg-white rounded-md px-3 py-2 mb-3">
+                <p
+                  class="opacity-50 tracking-wide text-ellipsis text-[12px] font-normal"
+                >
+                  Store the user's preference in
+                </p>
+                <p
+                  class="opacity-50 tracking-wide text-ellipsis truncate text-[12px] font-normal"
+                >
+                  localStorage, update CSS variables dynamically, and apply a
+                  smooth transition effect.
+                </p>
+              </div>
+              <hr
+                class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-3"
+              />
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
+                  <p class="text-[12px] text-[#00303C]">21 March 2025</p>
                 </div>
-             </div>
-             <!-- Optimize HomePage -->
-             <div class="bg-[#e4e9f8] rounded-xl p-4">
-                <div class="bg-white rounded-md w-24 px-3 py-2 mb-3">
-                    <p class="text-center text-sm font-normal">SwiftPay</p>
-                </div>
-                <h2 class="text-lg font-medium mb-3 text-[#00303C]">Optimize  Home page </h2>
-                <div class="bg-white rounded-md px-3 py-2 mb-3">
-                    <p class="opacity-50 tracking-wide text-ellipsis text-[12px] font-normal">Debug using Chrome</p>
-                    <p class="opacity-50 tracking-wide text-ellipsis truncate text-[12px] font-normal">DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
-                </div>
-                <hr class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-3">
-                <div class="flex justify-between">
-                    <div>
-                        <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
-                        <p class="text-[12px] text-[#00303C]">21 March 2025</p>
-                    </div>
-                    <button class="complete-task-btn hover:bg-slate-800 cursor-pointer text-sm font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
-                </div>
-             </div>
-             <!-- Add new emoji -->
-             <div class="bg-[#e4e9f8] rounded-xl p-4">
-                <div class="bg-white rounded-md w-24 px-3 py-2 mb-3">
-                    <p class="text-center text-sm font-normal">Meta</p>
-                </div>
-                <h2 class="text-lg font-medium mb-3 text-[#00303C]">Add new emoji 🤲</h2>
-                <div class="bg-white rounded-md px-3 py-2 mb-3">
-                    <p class="opacity-50 tracking-wide text-ellipsis text-[12px] font-normal">Store the user's preference in</p>
-                    <p class="opacity-50 tracking-wide text-ellipsis truncate text-[12px] font-normal">localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
-                </div>
-                <hr class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-3">
-                <div class="flex justify-between">
-                    <div>
-                        <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
-                        <p class="text-[12px] text-[#00303C]">21 March 2025</p>
-                    </div>
-                    <button class="complete-task-btn hover:bg-slate-800 cursor-pointer text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
-                </div>
-             </div>
-             <!-- OpenAI API -->
-             <div class="bg-[#e4e9f8] rounded-xl p-4">
-                <div class="bg-white rounded-md w-[105px] px-3 py-2 mb-3">
-                    <p class="text-center text-sm font-normal">Google LLC</p>
-                </div>
-                <h2 class="text-lg font-medium mb-3 text-[#00303C]">Integrate OpenAI API</h2>
-                <div class="bg-white rounded-md px-3 py-2 mb-3">
-                    <p class="opacity-50 tracking-wide text-ellipsis text-[12px] font-normal">Debug using Chrome</p>
-                    <p class="opacity-50 tracking-wide text-ellipsis truncate text-[12px] font-normal">DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
-                </div>
-                <hr class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-3">
-                <div class="flex justify-between">
-                    <div>
-                        <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
-                        <p class="text-[12px] text-[#00303C]">21 March 2025</p>
-                    </div>
-                    <button class="complete-task-btn hover:bg-slate-800 cursor-pointer text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
-                </div>
-             </div>
-             <!-- Imrpove job search -->
-             <div class="bg-[#e4e9f8] rounded-xl p-4">
-                <div class="bg-white rounded-md w-24 px-3 py-2 mb-3">
-                    <p class="text-center text-sm font-normal">Glassdoar</p>
-                </div>
-                <h2 class="text-[17px] font-medium mb-3 text-[#00303C]">Improve Job searching </h2>
-                <div class="bg-white rounded-md px-3 py-2 mb-3">
-                    <p class="opacity-50 tracking-wide text-ellipsis text-[12px] font-normal">Store the user's preference in</p>
-                    <p class="opacity-50 tracking-wide text-ellipsis truncate text-[12px] font-normal">localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
-                </div>
-                <hr class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-3">
-                <div class="flex justify-between">
-                    <div>
-                        <p class="text-[10px] text-[#00303c] opacity-70">Deadline</p>
-                        <p class="text-[12px] text-[#00303C]">21 March 2025</p>
-                    </div>
-                    <button class="complete-task-btn hover:bg-slate-800 cursor-pointer text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Completed</button>
-                </div>
-             </div>
+                <button
+                  class="complete-task-btn hover:bg-slate-800 cursor-pointer text-[12px] font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="w-full bg-white rounded-lg">
-            <div class="flex flex-col justify-center items-center mt-4 gap-3">
-                <div class="flex gap-3">
-                    <img src="assets/activity.svg" class="w-[17px]">
-                    <p class="text-sm font-medium text-[#00303C]">Activity Log</p>
-                </div>
-                <button id="clear-history" class="text-[12px] cursor-pointer font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2">Clear History</button>
-                <hr class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mt-3 mb-[18px]">
+          <div class="flex flex-col justify-center items-center mt-4 gap-3">
+            <div class="flex gap-3">
+              <img src="assets/activity.svg" class="w-[17px]" />
+              <p class="text-sm font-medium text-[#00303C]">Activity Log</p>
             </div>
-            <div id="activity-log" class="px-4">
-
-            </div>
+            <button
+              id="clear-history"
+              class="text-[12px] cursor-pointer font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2"
+            >
+              Clear History
+            </button>
+            <hr
+              class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mt-3 mb-[18px]"
+            />
+          </div>
+          <div id="activity-log" class="px-4"></div>
         </div>
       </section>
     </header>
 
-    <main></main>
-
     <script src="js/activity.js"></script>
     <script src="js/clearHistory.js"></script>
     <script src="js/date.js"></script>
+    <script src="js/switchPage.js"></script>
   </body>
 </html>
