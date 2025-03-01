@@ -11,11 +11,12 @@ function addActivity(taskName) {
     const activityItem = document.createElement('div');
     activityItem.className = 'bg-[#e4e9f8] p-3 rounded-lg mb-2';
     activityItem.innerHTML = `
-      <p class="text-[12px] text-gray-700">You have Completed The Task <span class"font-bold"> ${taskName} </span> at ${timeString}</p>
+      <p class="text-[12px] text-gray-700">You have Completed The Task <span class = "font-semibold"> ${taskName} </span> at <span class = "font-semibold">${timeString} </span></p>
     `;
 
     activityLog.appendChild(activityItem);
 }
+
 
 for (const button of document.querySelectorAll('.complete-task-btn')) {
     button.addEventListener('click', function () {
