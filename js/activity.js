@@ -1,4 +1,3 @@
-let completedTasks = new Set();
 let taskAssignedCount = 6;
 let navTaskCount = 23;
 
@@ -17,18 +16,11 @@ function addActivity(taskName) {
     activityLog.appendChild(activityItem);
 }
 
-
 for (const button of document.querySelectorAll('.complete-task-btn')) {
     button.addEventListener('click', function () {
         alert('Board Updated Successfully');
         const taskCard = button.parentNode.parentNode;
         const taskName = taskCard.querySelector('h2').textContent;
-
-        if (completedTasks.has(taskName)) {
-            return;
-        }
-
-        completedTasks.add(taskName);
 
         button.textContent = 'Completed';
         button.classList.remove('hover:bg-slate-800' ,'cursor-pointer');
