@@ -16,13 +16,6 @@
         font-family: "Poppins", sans-serif;
         font-weight: 400;
         font-style: normal;
-
-        .custom-hr {
-          border: 0;
-          border-top: 3px dashed #3752fd/20;
-          margin: 3rem auto;
-          width: 80%;
-        }
       }
     </style>
   </head>
@@ -31,7 +24,7 @@
       <nav class="bg-white flex justify-between h-20 rounded-xl p-6 mt-4">
         <div class="flex justify-center items-center gap-3">
           <img src="assets/logo.svg" class="w-[35px]" />
-          <h1 class="text-2xl">
+          <h1 id="home" class="text-2xl cursor-pointer">
             <span class="font-light">Dev</span
             ><span class="font-bold">Board</span>
           </h1>
@@ -43,7 +36,7 @@
             <img src="assets/nav_tick.svg" class="h-6 pl-4" />
             <h4 id="nav-task-count" class="font-bold text-2xl py-3 pr-2">23</h4>
           </div>
-          <button class="rounded-full border-[8px] border-[#F4F7FF]">
+          <button id="theme-btn" class="rounded-full cursor-pointer border-[8px] border-[#F4F7FF]">
             <img src="assets/theme.svg" class="" />
           </button>
         </div>
@@ -68,19 +61,10 @@
                 <h3 id="task-assigned-count" class="text-2xl font-bold">6</h3>
               </div>
             </div>
-            <!-- <div
-              id="blog"
-              class="flex gap-4 justify-start items-center cursor-pointer bg-gradient-to-r from-[#3752fd] via-[#6b7ffa] to-[#9aa7f7] py-4 px-7 rounded-lg w-1/2"
-            >
-              <img src="assets/board.svg" class="w-14" />
-              <p class="text-white text-lg font-medium">
-                Discover Something <br />
-                New Today!
-              </p>
-            </div> -->
+
             <button
               id="blog"
-              class="flex gap-4 justify-start items-center cursor-pointer bg-gradient-to-r from-[#3752fd] via-[#6b7ffa] to-[#9aa7f7] py-4 px-7 rounded-lg w-1/2"
+              class="flex gap-4 justify-start items-center text-start cursor-pointer bg-gradient-to-r from-[#3752fd] via-[#6b7ffa] to-[#9aa7f7] py-4 px-7 rounded-lg w-1/2"
             >
               <img src="assets/board.svg" class="w-14" />
               <p class="text-white text-lg font-medium">
@@ -96,7 +80,10 @@
               >
                 <img src="assets/calendar.svg" class="h-5" />
               </div>
-              <div id="current-date" class="text-gray-700 font-medium"></div>
+              <div id="current-date" class="text-gray-700 font-medium">
+                <p class="font-bold text-lg" id="day-name"></p>
+                <p class="text-sm" id="date-info"></p>
+              </div>
             </div>
           </div>
           <hr class="w-full h-[0px] border border-[#3752fd]/20 border-dashed" />
@@ -343,6 +330,7 @@
     </header>
 
     <script src="js/activity.js"></script>
+    <script src="js/theme.js"></script>
     <script src="js/clearHistory.js"></script>
     <script src="js/date.js"></script>
     <script src="js/switchPage.js"></script>

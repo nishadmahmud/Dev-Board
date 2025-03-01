@@ -6,12 +6,12 @@ function addActivity(taskName) {
     const activityLog = document.getElementById('activity-log');
 
     const now = new Date();
-    const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    const timeString = now.toLocaleTimeString('en-US');
 
     const activityItem = document.createElement('div');
     activityItem.className = 'bg-[#e4e9f8] p-3 rounded-lg mb-2';
     activityItem.innerHTML = `
-      <p class="text-[12px] text-gray-700">You have Completed The Task ${taskName} at ${timeString}</p>
+      <p class="text-[12px] text-gray-700">You have Completed The Task <span class"font-bold"> ${taskName} </span> at ${timeString}</p>
     `;
 
     activityLog.appendChild(activityItem);
