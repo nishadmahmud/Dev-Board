@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
     />
     <title>Blog</title>
     <style>
@@ -20,8 +25,8 @@
     </style>
   </head>
   <body class="poppins bg-[#e4e9f8]">
-    <header class="max-w-[1080px] mx-auto mb-3">
-      <nav class="bg-white flex justify-between h-20 rounded-xl p-5 mt-4">
+    <header class="max-w-[1080px] mx-auto pt-4">
+      <nav class="bg-white flex justify-between h-20 rounded-xl p-5">
         <div class="flex justify-center items-center gap-3">
           <img src="assets/logo.svg" class="w-[35px]" />
           <h1 class="text-2xl">
@@ -29,7 +34,8 @@
             ><span class="font-bold">Board</span>
           </h1>
         </div>
-        <button id="home"
+        <button
+          id="home"
           class="text-base cursor-pointer font-medium bg-[#3752FD] rounded-lg text-white px-4 py-2"
         >
           Back To Desk
@@ -38,57 +44,203 @@
     </header>
 
     <main>
-      <section class="max-w-[1080px] mx-auto mb-10 space-y-3">
-        <h1 class="text-center text-2xl font-bold">Blog</h1>
-        <div class="bg-white rounded-xl p-4">
-          <h2 class="font-semibold">
+      <section class="max-w-[1080px] mx-auto pb-10 space-y-3">
+        <h1 class="text-center text-2xl font-bold mt-3">Blog</h1>
+        <div class="collapse collapse-arrow bg-white">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title font-semibold">
             Question-1: What are the different ways to select an element in the
             DOM?
-          </h2>
-          <hr
-            class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mt-3 mb-[18px]"
-          />
-          <p></p>
+          </div>
+          <div class="collapse-content text-sm">
+            <hr
+              class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-[18px]"
+            />
+            <p>We can select elements using:</p>
+            <ul class="list-disc pl-6 mt-2 space-y-1">
+              <li>
+                <code class="bg-gray-100 px-1 rounded"
+                  >document.getElementById('id')</code
+                >: Selects an element by its unique ID.
+              </li>
+              <li>
+                <code class="bg-gray-100 px-1 rounded"
+                  >document.querySelector('selector')</code
+                >: Selects the first element matching the CSS selector.
+              </li>
+              <li>
+                <code class="bg-gray-100 px-1 rounded"
+                  >document.querySelectorAll('selector')</code
+                >: Selects all elements matching the CSS selector.
+              </li>
+              <li>
+                <code class="bg-gray-100 px-1 rounded"
+                  >document.getElementsByClassName('class')</code
+                >: Selects elements by their class name.
+              </li>
+              <li>
+                <code class="bg-gray-100 px-1 rounded"
+                  >document.getElementsByTagName('tag')</code
+                >: Selects elements by their tag name.
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="bg-white rounded-xl p-4">
-          <h2 class="font-semibold">
+        <div class="collapse collapse-arrow bg-white">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">
             Question-2: What is the difference between innerHTML, innerText, and
             textContent ?
-          </h2>
-          <hr
-            class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mt-3 mb-[18px]"
-          />
-          <p></p>
+          </div>
+          <div class="collapse-content">
+            <hr
+              class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-[18px]"
+            />
+            <table
+              class="table-auto text-sm w-full border-collapse border border-gray-300"
+            >
+              <thead>
+                <tr class="bg-gray-200">
+                  <th
+                    class="border border-gray-300 px-4 py-2 font-bold text-left"
+                  >
+                    Property
+                  </th>
+                  <!-- <th class="border border-gray-300 px-4 py-2 font-bold text-left">Gets/Sets</th> -->
+                  <th
+                    class="border border-gray-300 px-4 py-2 font-bold text-left"
+                  >
+                    Description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="even:bg-gray-100">
+                  <td class="border border-gray-300 px-4 py-2">innerHTML</td>
+                  <!-- <td class="border border-gray-300 px-4 py-2">HTML content</td> -->
+                  <td class="border border-gray-300 px-4 py-2">
+                    This property allows you to get or set the HTML content
+                    inside an element. That means it includes all the HTML tags
+                    along with the text.
+                  </td>
+                </tr>
+                <tr class="even:bg-gray-100">
+                  <td class="border border-gray-300 px-4 py-2">innerText</td>
+                  <!-- <td class="border border-gray-300 px-4 py-2">Visible text</td> -->
+                  <td class="border border-gray-300 px-4 py-2">
+                    This property gets or sets only the visible text inside an
+                    element. It ignores any hidden elements (like those with
+                    display: none;) and doesn't include any HTML tags. It also
+                    respects the styling of the page, meaning it only shows what
+                    a user would actually see on the screen.
+                  </td>
+                </tr>
+                <tr class="even:bg-gray-100">
+                  <td class="border border-gray-300 px-4 py-2">textContent</td>
+                  <!-- <td class="border border-gray-300 px-4 py-2">All text content</td> -->
+                  <td class="border border-gray-300 px-4 py-2">
+                    This property gets or sets all the text inside an element,
+                    including text that is hidden (like elements with display:
+                    none;). It doesn't care about visibility or styling—it just
+                    grabs all the text, but it ignores HTML tags .
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="bg-white rounded-xl p-4">
-          <h2 class="font-semibold">
+        <div class="collapse collapse-arrow bg-white">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">
             Question-3: What is event delegation in the DOM?
-          </h2>
-          <hr
-            class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mt-3 mb-[18px]"
-          />
-          <p></p>
+          </div>
+          <div class="collapse-content">
+            <hr class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-[18px]" />
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Event delegation is a technique where we attach a single event listener to a parent element instead of individual listeners on child elements. It works because events triggered on child elements "bubble up" to their parent. Using this approach, you can handle events for multiple child elements efficiently without needing separate listeners for each.
+            </p>
+            <p class="text-sm text-gray-700 leading-relaxed mt-3">
+              <strong>Advantages:</strong>
+            </p>
+            <ul class="list-disc list-inside text-sm text-gray-700 mt-2">
+              <li>Improves performance by reducing the number of event listeners.</li>
+              <li>Handles events for dynamically added or removed elements automatically.</li>
+              <li>Simplifies code by centralizing event handling logic.</li>
+            </ul>
+          </div>
         </div>
-        <div class="bg-white rounded-xl p-4">
-          <h2 class="font-semibold">
+        <div class="collapse collapse-arrow bg-white">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">
             Question-4: What is event bubbling in the DOM?
-          </h2>
-          <hr
-            class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mt-3 mb-[18px]"
-          />
-          <p></p>
+          </div>
+          <div class="collapse-content">
+            <hr
+              class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-[18px]"
+            />
+            <p class="text-sm">
+              Event bubbling is a concept in the DOM where an event triggered on
+              a child element propagates up through its ancestors in the DOM
+              tree. This means that when an event occurs (e.g., a click), it is
+              first handled by the innermost element (the target), and then
+              successively by its parent elements until it reaches the root of
+              the DOM tree.
+            </p>
+            <p class="mt-2 text-sm">
+              For example, if we have a button inside a div, and both have click
+              event listeners, clicking the button will trigger its event
+              handler first, followed by the event handler of the div. This
+              propagation can be stopped using methods like
+              <code>event.stopPropagation()</code>.
+            </p>
+            <p class="mt-2 text-sm">
+              It enables a technique called <em>event delegation</em>, where we
+              attach a single event listener to a parent element to handle
+              events from its child elements. This improves performance and
+              reduces memory usage, especially when dealing with dynamic or
+              large numbers of child elements.
+            </p>
+          </div>
         </div>
-        <div class="bg-white rounded-xl p-4">
-          <h2 class="font-semibold">
+        <div class="collapse collapse-arrow bg-white">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">
             Question-5: How do you create, add, and remove elements using
             JavaScript?
-          </h2>
-          <hr
-            class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mt-3 mb-[18px]"
-          />
-          <p></p>
+          </div>
+          <div class="collapse-content text-sm">
+            <hr
+              class="w-full h-[0px] border border-[#3752fd]/20 border-dashed mb-[18px]"
+            />
+            <ul class="list-disc pl-6 mt-2 space-y-1">
+              <li>
+                <strong>Create</strong>: Use
+                <code class="bg-gray-100 px-1 rounded"
+                  >document.createElement('tagName')</code
+                >
+                to create a new element.
+              </li>
+              <li>
+                <strong>Add</strong>: Use
+                <code class="bg-gray-100 px-1 rounded"
+                  >parentElement.appendChild(newElement)</code
+                >
+                to add it to the DOM.
+              </li>
+              <li>
+                <strong>Remove</strong>: Use
+                <code class="bg-gray-100 px-1 rounded">element.remove()</code>
+                or
+                <code class="bg-gray-100 px-1 rounded"
+                  >parentElement.removeChild(childElement)</code
+                >
+                to remove an element.
+              </li>
+            </ul>
+            <p class="mt-2">Example:</p>
+            <img src="assets/carbon.png" class="w-96 h-auto rounded-lg ml-20" >
+          </div>
         </div>
-        <!-- <span class="font-bold">HI</span> -->
       </section>
     </main>
 

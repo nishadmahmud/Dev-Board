@@ -31,3 +31,13 @@ document.getElementById('theme-btn')?.addEventListener('click', function() {
     
     document.body.style.backgroundColor = newColor;
 });
+
+// Create
+const newDiv = document.createElement('div');
+newDiv.textContent = 'Hello, World!';
+
+// Add
+document.body.appendChild(newDiv);
+
+// Remove
+newDiv.remove();
