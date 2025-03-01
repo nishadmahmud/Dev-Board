@@ -22,8 +22,7 @@ for (const button of document.querySelectorAll('.complete-task-btn')) {
         const taskCard = button.parentNode.parentNode;
         const taskName = taskCard.querySelector('h2').textContent;
 
-        button.textContent = 'Completed';
-        button.classList.remove('hover:bg-slate-800' ,'cursor-pointer');
+        button.classList.remove('hover:bg-white','hover:text-[#3752FD]' ,'cursor-pointer');
         button.classList.add('opacity-30');
         button.disabled = true;
 
